@@ -4,7 +4,7 @@ import { navbar } from "@/data/navbar";
 const DesktopNav = () => {
   return (
     <nav
-      className="border-b border-gray-700bg-black/40 backdrop-blur-xl border border-white/10  hidden  md:flex fixed top-0 left-0 z-50 w-full px-8 xl:px-[8%] py-4 items-center justify-between"
+      className="border-b border-gray-700 bg-black/40 backdrop-blur-xl border border-white/10  hidden  md:flex fixed top-0 left-0 z-50 w-full px-8 xl:px-[8%] py-4 items-center justify-between"
     >
       <a href="#top" className="flex items-center gap-2">
         <h1 className="font-ovo text-lg text-white cursor-pointer font-bold">
