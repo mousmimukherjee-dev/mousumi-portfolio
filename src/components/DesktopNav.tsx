@@ -28,13 +28,6 @@ const DesktopNav = () => {
         className="bg-orange-400 font-ovo flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full"
       >
         Hire me{" "}
-        <Image
-          src="/arrow-icon.png"
-          alt=""
-          width={12}
-          height={12}
-          className="w-3"
-        />
       </a>
     </nav>
   );
