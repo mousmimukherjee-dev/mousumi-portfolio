@@ -42,7 +42,11 @@ const Contact = () => {
       className="w-full px-[8%] min-h-screen  pt-5 pb-5 md:pt-32 py-24 scroll-mt-20 bg-black text-white "
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16">
-        <motion.div initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+        >
           <p className="text-orange-400 text-sm tracking-widest font-semibold mb-6 font-mono">
             CONTACT
           </p>
@@ -54,9 +58,11 @@ const Contact = () => {
             together.
           </h2>
           <p className="text-gray-300 font-ovo max-w-xl mb-10 leading-relaxed">
-            I&apos;m actively looking for internship opportunities or junior
-            frontend roles. If you&apos;re working on something interesting and
-            need an eager developer, reach out.
+            I am currently seeking a LIA internship or junior frontend developer
+            role where I can contribute, keep learning, and grow alongside
+            experienced developers. If you are looking for a motivated frontend
+            developer with experience in React, Next.js, TypeScript, and modern
+            web tools. I would love to hear from you.
           </p>
           <a
             href="mailto:mousumi.chatterjee6@gmail.com"
@@ -68,7 +74,12 @@ const Contact = () => {
           </a>
         </motion.div>
 
-        <motion.div initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="flex flex-col gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+          className="flex flex-col gap-4"
+        >
           {contactLinks.map((link) => (
             <a
               key={link.label}
