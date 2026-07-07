@@ -87,7 +87,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               {...(link.download ? { download: true } : { target: "_blank" })}
-              className="border border-gray-700 rounded-lg p-4 md:p-6 hover:border-orange-400/60 transition-colors group"
+              className="border border-gray-700 rounded-lg p-2 md:p-6 hover:border-orange-400/60 transition-colors group"
             >
               <div className="flex items-center justify-between">
                 <div>

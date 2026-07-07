@@ -12,7 +12,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
         <motion.div initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}}>
           <p className="text-orange-400 text-sm tracking-widest font-semibold mb-8">
-            ABOUT
+            About me
           </p>
           <p className=" text-2xl tracking-widest font-semibold mb-8">
             Core Principles
@@ -28,10 +28,10 @@ const About = () => {
         </motion.div>
 
         <div>
-          <motion.h2 initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="text-2xl sm:text-5xl font-Ovo leading-tight mb-2 whitespace-nowrap">
+          <motion.h2 initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="text-xl sm:text-5xl font-Ovo leading-tight mb-2 whitespace-nowrap">
             Frontend development is where
           </motion.h2>
-          <motion.h2 initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="text-2xl sm:text-5xl font-Ovo italic text-orange-400 mb-8">
+          <motion.h2 initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="text-xl sm:text-5xl font-Ovo italic text-orange-400 mb-8">
             design meets technology.
           </motion.h2>
 

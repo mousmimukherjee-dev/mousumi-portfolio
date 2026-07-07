@@ -1,8 +1,7 @@
 "use client";
-
-import { tags } from "@/data/tags";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ProjectProps {
   description: string;
@@ -43,11 +42,21 @@ const Projects = () => {
       className="w-full min-h-screen px-[8%]  pt-5 pb-5 md:pt-32 py-24 scroll-mt-10 bg-black text-white"
     >
       <div className="max-w-6xl mx-auto">
-        <motion.p initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="text-orange-400 text-sm tracking-widest font-semibold mb-6">
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+          className="text-orange-400 text-sm tracking-widest font-semibold mb-6"
+        >
           PROJECTS
         </motion.p>
-        <motion.div initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
-          <h2 className="text-5xl sm:text-7xl font-Ovo">Selected work</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12"
+        >
+          <h2 className="text-5xl sm:text-7xl font-Ovo">Latest Projects</h2>
 
           <a
             href="https://github.com/mousmimukherjee-dev"
@@ -55,14 +64,19 @@ const Projects = () => {
             rel="noopener noreferrer"
             className="text-orange-400 font-ovo flex items-center gap-1 hover:underline"
           >
-            All on GitHub ↗
+            All on GitHub <ArrowUpRight className="text-white w-4 h-4" />
           </a>
         </motion.div>
 
         <div className="border-t border-gray-700" />
 
         {projects.slice(0, 4).map((project, index) => (
-          <motion.div initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} key={index}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+            key={index}
+          >
             <div className="grid grid-cols-[auto_1fr_auto] gap-6 py-10 items-start">
               <span className="text-gray-500 font-ovo pt-2">
                 {String(index + 1).padStart(2, "0")}
