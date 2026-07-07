@@ -66,11 +66,11 @@ const Contact = () => {
           </p>
           <a
             href="mailto:mousumi.chatterjee6@gmail.com"
-            className="inline-flex items-center gap-3 bg-orange-400 text-black font-mono px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-orange-300 transition-colors"
+            className="inline-flex items-center gap-1 bg-orange-400 text-black font-mono px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-orange-300 transition-colors"
           >
             <Mail className="w-4 h-4" />
             mousumi.chatterjee6@gmail.com
-            <ArrowUpRight className="w-4 h-4" />
+            
           </a>
         </motion.div>
 
