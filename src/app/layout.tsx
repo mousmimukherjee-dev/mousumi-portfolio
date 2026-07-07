@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en" className="scroll-smooth" 
+      lang="en" className="scroll-smooth overflow-x-hidden" 
     >
       <body className={`min-h-full  flex flex-col ${outfit.className} ${ovo.className} h-full antialiased leading-8 overflow-x-hidden`}>
         <Header/>
