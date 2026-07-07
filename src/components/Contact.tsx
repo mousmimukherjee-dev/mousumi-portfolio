@@ -66,11 +66,11 @@ const Contact = () => {
           </p>
           <a
             href="mailto:mousumi.chatterjee6@gmail.com"
-            className="inline-flex items-center gap-1 bg-orange-400 text-black font-mono px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-orange-300 transition-colors"
+            className="inline-flex items-center gap-1 bg-orange-400 text-black-100 font-mono px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-orange-300 transition-colors"
           >
             <Mail className="w-4 h-4" />
             mousumi.chatterjee6@gmail.com
-            
+            <ArrowUpRight className="w-4 h-4 text-black-100" />
           </a>
         </motion.div>
 
@@ -87,7 +87,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               {...(link.download ? { download: true } : { target: "_blank" })}
-              className="border border-gray-700 rounded-lg p-6 hover:border-orange-400/60 transition-colors group"
+              className="border border-gray-700 rounded-lg p-4 md:p-6 hover:border-orange-400/60 transition-colors group"
             >
               <div className="flex items-center justify-between">
                 <div>

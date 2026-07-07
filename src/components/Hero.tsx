@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { motion } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -15,10 +16,10 @@ export const Hero = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex items-center gap-4  mb-1 mt-1 md:mt-8"
       >
-        <span className="text-orange-light font-mono text-sm tracking-widest">
+        <span className="text-orange-light font-mono text-sm md:tracking-widest">
           FRONTEND DEVELOPER
         </span>
-        <span className="flex-1 max-w-[80px] h-px bg-gray-600" />
+        <span className="flex-1 max-w-20 h-px bg-gray-600" />
         <span className="flex items-center gap-2 text-gray-300 font-mono text-sm">
           Open to work
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -30,7 +31,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="mt-5 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light font-fraunches leading-[1.05]"
+            className="mt-5 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light font-fraunches"
           >
             Shaping modern{" "}
             <span className="text-orange-400 block whitespace-nowrap">
@@ -57,14 +58,14 @@ export const Hero = () => {
           >
             <a
               href="#projects"
-              className="bg-orange-400 text-black font-ovo font-semibold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-orange-300 transition-colors"
+              className="bg-orange-400 text-black font-ovo font-semibold px-4 py-2 md:px-8 md:py-4 rounded-full flex items-center gap-2 hover:bg-orange-300 transition-colors"
             >
-              View Projects ↗
+              View Projects <ArrowUpRight className="w-4 h-4 text-black-100" />
             </a>
 
             <a
               href="#contact"
-              className="border border-gray-600 font-ovo px-8 py-4 rounded-full flex items-center gap-2 hover:border-orange-400 transition-colors"
+              className="border border-gray-600 font-ovo px-4 py-2 md:px-8 md:py-4 rounded-full flex items-center gap-2 hover:border-orange-400 transition-colors"
             >
               <FiMail className="w-4 h-4" />
               Contact me
