@@ -19,7 +19,7 @@ export const timeline: timelineProps[] = [
   },
   {
  
-    text: "Reusable React components",
+    text: "Reusable components",
   },
   {
 

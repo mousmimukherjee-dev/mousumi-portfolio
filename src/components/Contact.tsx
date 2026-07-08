@@ -51,10 +51,10 @@ const Contact = () => {
             CONTACT
           </p>
 
-          <h2 className="text-5xl sm:text-7xl font-Ovo leading-tight">
+          <h2 className="text-3xl sm:text-7xl font-Ovo leading-tight">
             Let&apos;s build something
           </h2>
-          <h2 className="text-5xl sm:text-7xl italic font-Ovo text-orange-400 mb-8">
+          <h2 className="text-3xl sm:text-7xl italic font-Ovo text-orange-400 mb-8">
             together.
           </h2>
           <p className="text-gray-300 font-ovo max-w-xl mb-10 leading-relaxed">
@@ -66,10 +66,11 @@ const Contact = () => {
           </p>
           <a
             href="mailto:mousumi.chatterjee6@gmail.com"
-            className="inline-flex items-center gap-1 bg-orange-400 text-black-100 font-mono px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-orange-300 transition-colors"
+            className="inline-flex  items-center gap-1 bg-orange-400 text-black-100 font-mono p-2 md:px-6 md:py-4 rounded-lg md:rounded-full hover:bg-orange-300 transition-colors"
           >
             <Mail className="w-4 h-4" />
-            mousumi.chatterjee6@gmail.com
+            <span className="hidden sm:inline text-sm font-mono text-black-100">mousumi.chatterjee6@gmail.com</span>
+            <span className="md:hidden inline-flex text-sm font-mono text-black-100">Email me</span>    
             <ArrowUpRight className="w-4 h-4 text-black-100" />
           </a>
         </motion.div>

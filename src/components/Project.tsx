@@ -39,7 +39,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full min-h-screen px-[8%]  pt-5 pb-5 md:pt-32 py-24 scroll-mt-10 bg-black text-white"
+      className="w-full min-h-screen px-[8%]  pt-5 pb-5 md:pt-32 py-24 md:scroll-mt-10 scroll-mt-20 bg-black text-white"
     >
       <div className="max-w-6xl mx-auto">
         <motion.p
@@ -56,7 +56,7 @@ const Projects = () => {
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12"
         >
-          <h2 className="text-5xl sm:text-7xl font-Ovo">Latest Projects</h2>
+          <h2 className="text-3xl sm:text-7xl font-Ovo">Latest Projects</h2>
 
           <a
             href="https://github.com/mousmimukherjee-dev"

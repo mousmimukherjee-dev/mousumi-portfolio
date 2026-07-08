@@ -49,14 +49,14 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full px-[8%]  pt-5 pb-5 md:pt-32 py-24 scroll-mt-10 bg-black text-white"
+      className="w-full px-[8%]  pt-5 pb-5 md:pt-32 py-24 md:scroll-mt-10 scroll-mt-20 bg-black text-white"
     >
       <motion.div initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="max-w-6xl mx-auto">
         <p className="text-orange-400 text-sm tracking-widest font-semibold mb-6 font-mono">
           SKILLS
         </p>
 
-        <h2 className="text-5xl sm:text-7xl font-Ovo mb-16">The toolkit</h2>
+        <h2 className="text-3xl sm:text-7xl font-Ovo mb-16">The toolkit</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-gray-700">
           {skillGroups.map((group, index) => (

@@ -16,7 +16,7 @@ export const Hero = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex items-center gap-4  mb-1 mt-1 md:mt-8"
       >
-        <span className="text-orange-light font-mono text-sm md:tracking-widest">
+        <span className="text-orange-light font-mono text-sm">
           FRONTEND DEVELOPER
         </span>
         <span className="flex-1 max-w-20 h-px bg-gray-600" />
