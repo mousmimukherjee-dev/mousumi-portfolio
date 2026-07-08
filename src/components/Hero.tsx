@@ -16,7 +16,7 @@ export const Hero = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex items-center gap-4  mb-1 mt-1 md:mt-8"
       >
-        <span className="text-orange-light font-mono text-sm">
+        <span className="text-orange-400 font-mono text-sm">
           FRONTEND DEVELOPER
         </span>
         <span className="flex-1 max-w-20 h-px bg-gray-600" />
@@ -31,7 +31,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="mt-5 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light font-fraunches"
+            className="mt-5 text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-light font-fraunches"
           >
             Shaping modern{" "}
             <span className="text-orange-400 block whitespace-nowrap">

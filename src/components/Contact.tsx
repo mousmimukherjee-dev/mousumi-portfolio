@@ -91,13 +91,13 @@ const Contact = () => {
               className="border border-gray-700 rounded-lg p-2 md:p-6 hover:border-orange-400/60 transition-colors group"
             >
               <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-gray-500 font-mono text-xs mb-2">
+                <div className="min-w-0 flex-1">
+                  <p className="text-gray-500 font-mono text-xs mb-2 break-all">
                     {link.label}
                   </p>
                   <p className="font-mono text-sm sm:text-base">{link.value}</p>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-gray-500 group-hover:text-orange-400 transition-colors" />
+                <ArrowUpRight className="w-4 h-4 text-gray-500 group-hover:text-orange-400 transition-colors shrink-0" />
               </div>
             </a>
           ))}
