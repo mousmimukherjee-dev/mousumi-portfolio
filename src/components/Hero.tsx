@@ -35,7 +35,7 @@ export const Hero = () => {
           >
             Shaping modern{" "}
             <span className="text-orange-400 block whitespace-nowrap">
-              frontend experiences.
+              frontend experience.
             </span>
           </motion.h1>
 
@@ -112,7 +112,7 @@ export const Hero = () => {
               </div>
               <p className="font-fraunches text-lg mt-3">Mousumi Mukherjee</p>
               <p className="text-gray-400 font-mono text-xs mt-1">
-                Frontend Dev · Stockholm, Sweden
+                Frontend Developer · Stockholm, Sweden
               </p>
               <div className="flex flex-wrap gap-2 mt-3">
                 {["React", "TypeScript", "CSS", "Next.js"].map((tag) => (
