@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Code2, Layers, Terminal, Globe } from "lucide-react";
+import { Code2, Layers, Terminal, Globe, Database, FlaskConical } from "lucide-react";
 import { motion } from "motion/react";
 
 interface SkillGroup {
@@ -24,17 +24,48 @@ const skillGroups: SkillGroup[] = [
   {
     icon: <Layers className="w-4 h-4" />,
     title: "FRAMEWORKS",
-    skills: ["React", "Next.js", "Vite", "Tailwind CSS"],
+    skills: [
+      "React",
+      "Next.js",
+      "Angular",
+      "Vite",
+      "Tailwind CSS",
+      "Bootstrap",
+      "MUI",
+    ],
+  },
+  {
+    icon: <Database className="w-4 h-4" />,
+    title: "BACKEND & DATABASE",
+    skills: [
+      "C# / .NET",
+      "ASP.NET Core",
+      "SQL Server",
+      "Entity Framework Core",
+      "REST APIs",
+    ],
+  },
+  {
+    icon: <FlaskConical className="w-4 h-4" />,
+    title: "TESTING",
+    skills: ["Jest", "React Testing Library"],
   },
   {
     icon: <Terminal className="w-4 h-4" />,
     title: "TOOLING",
-    skills: ["Git / GitHub", "VS Code", "Figma", "Miro"],
+    skills: [
+      "Git / GitHub",
+      "GitHub Actions (CI/CD)",
+      "Azure",
+      "Vercel",
+      "Figma",
+      "VS Code",
+    ],
   },
   {
     icon: <Globe className="w-4 h-4" />,
     title: "EXPLORING",
-    skills: ["Node.js", "Express.js", "PostgreSQL", "REST APIs"],
+    skills: ["Node.js", "Express.js", "PostgreSQL"],
   },
 ];
 
@@ -58,7 +89,7 @@ const Skills = () => {
 
         <h2 className="text-3xl sm:text-7xl font-Ovo mb-16">The toolkit</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-gray-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-gray-700">
           {skillGroups.map((group, index) => (
             <div
               key={group.title}

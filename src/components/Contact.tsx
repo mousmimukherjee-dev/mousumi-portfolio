@@ -69,7 +69,7 @@ const Contact = () => {
             className="inline-flex  items-center gap-1 bg-orange-400 text-black-100 font-mono p-2 md:px-6 md:py-4 rounded-lg md:rounded-full hover:bg-orange-300 transition-colors"
           >
             <Mail className="w-4 h-4" />
-            <span className="hidden sm:inline text-sm font-mono text-black-100">mousumi.chatterjee6@gmail.com</span>
+            <span className="hidden sm:inline text-sm font-mono text-black-100">mousmichatterjee6@gmail.com</span>
             <span className="md:hidden inline-flex text-sm font-mono text-black-100">Email me</span>    
             <ArrowUpRight className="w-4 h-4 text-black-100" />
           </a>
