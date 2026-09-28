@@ -10,11 +10,12 @@ import { useEffect } from "react";
 
 export default function Home() {
 
-  useEffect(()=>{
+  useEffect(() => {
+    history.scrollRestoration = "manual";
 
-    history.scrollRestoration="manual"
-    window.scrollTo(0,0)
-  },[])
+    window.history.replaceState(null, "", "#home");
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <Hero/>

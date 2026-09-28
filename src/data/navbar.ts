@@ -4,20 +4,20 @@ export const navbar:navbarProps[] = [
    {
     id: 1,
     title: "Home",
-    link:"#top"
+    link:"#home"
   },
   {
     id: 2,
-    title: "About me",
+    title: "About",
     link:"#about"
   },
   {
-    id: 4,
+    id: 3,
     title: "Projects",
     link:"#projects"
   },
    {
-    id: 3,
+    id: 4,
     title: "Skills",
     link:"#skills"
   },

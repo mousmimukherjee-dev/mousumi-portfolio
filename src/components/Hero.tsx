@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 export const Hero = () => {
   return (
     <main
-      id="top"
+      id="home"
       className="w-full min-h-screen flex flex-col justify-center px-[8%] pt-22 pb-4 md:pt-22 md:pb-16 bg-black text-white"
     >
       <motion.div
@@ -17,25 +17,25 @@ export const Hero = () => {
         className="flex items-center gap-4  mb-1 mt-1 md:mt-8"
       >
         <span className="text-orange-400 font-mono text-sm">
-          FRONTEND DEVELOPER
+          Frontend & Fullstack Developer.
         </span>
         <span className="flex-1 max-w-20 h-px bg-gray-600" />
         <span className="flex items-center gap-2 text-gray-300 font-mono text-sm">
-          Open to work
+          Open to LIA internships
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
         </span>
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
         <div className="flex flex-col">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="mt-5 text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-light font-fraunches"
+            className="mt-5 text-3xl sm:text-5xl md:text-7xl lg:text-7xl font-light font-fraunches"
           >
-            Shaping modern{" "}
+            Building modern web experiences from{" "}
             <span className="text-orange-400 block whitespace-nowrap">
-              frontend experience.
+              frontend to backend.
             </span>
           </motion.h1>
 
@@ -45,10 +45,11 @@ export const Hero = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             className="text-gray-300 font-ovo text-lg max-w-xl md:mt-8  mt-5"
           >
-            Frontend developer who enjoys turning ideas into fast, accessible
-            digital experiences. Driven by curiosity and a passion for
-            continuous learning, I see every project as an opportunity to solve
-            problems, refine my craft, and build things people genuinely enjoy.
+            Frontend & Fullstack developer who enjoys turning ideas into fast,
+            accessible digital experiences. Driven by curiosity and a passion
+            for continuous learning, I see every project as an opportunity to
+            solve problems, refine my craft, and build things people genuinely
+            enjoy.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -104,7 +105,7 @@ export const Hero = () => {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-gray-950/40 to-transparent" />
             </div>
             <div className="px-5 pb-5 -mt-8 relative">
               <div className="w-14 h-14 rounded-full bg-orange-400 text-black font-bold flex items-center justify-center border-4 border-gray-950">
@@ -112,10 +113,17 @@ export const Hero = () => {
               </div>
               <p className="font-fraunches text-lg mt-3">Mousumi Mukherjee</p>
               <p className="text-gray-400 font-mono text-xs mt-1">
-                Frontend Developer · Stockholm, Sweden
+                Frontend &amp; Fullstack Developer · Stockholm, Sweden
               </p>
               <div className="flex flex-wrap gap-2 mt-3">
-                {["React", "TypeScript", "CSS", "Next.js"].map((tag) => (
+                {[
+                  "React",
+                  "Next.js",
+                  "TypeScript",
+                  "Angular",
+                  ".NET",
+                  "SQL Server",
+                ].map((tag) => (
                   <span
                     key={tag}
                     className="text-xs font-mono px-3 py-1 rounded-full border border-gray-700 text-gray-300"
@@ -184,13 +192,13 @@ export const Hero = () => {
               ,
             </p>
             <p className="pl-4">
-              role:{" "}
-              <span className="text-orange-300">&quot;Frontend Dev&quot;</span>,
+             lookingFor:{" "}
+              <span className="text-orange-300">&quot;LIA internship&quot;</span>,
             </p>
             <p className="pl-4">
-              passion:{" "}
+              role:{" "}
               <span className="text-orange-300">
-                &quot;Solving Problem&quot;
+                &quot;Frontend &amp; Fullstack Dev&quot;
               </span>
               ,
             </p>

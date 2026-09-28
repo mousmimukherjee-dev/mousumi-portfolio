@@ -34,7 +34,7 @@ const MobileNav = () => {
       className="border-b border-gray-700 bg-black/90 backdrop-blur-xl border md:hidden w-full fixed top-0 left-0 z-50 flex flex-col"
     >
       <div className="w-full flex top-0 left-0 right-0 z-50 bg-black px-5 py-4 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2">
+        <a href="#home" className="flex items-center gap-2">
           <h1 className="font-ovo text-lg text-white cursor-pointer font-bold">
             Mousumi Mukherjee
           </h1>
@@ -91,7 +91,7 @@ const MobileNav = () => {
             onClick={closeMenu}
             className="bg-orange-400 font-ovo flex items-center justify-center gap-3 py-3.5 border border-gray-500 rounded-full w-full"
           >
-            Hire me
+           Let's talk
           </a>
         </li>
       </ul>

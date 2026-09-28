@@ -4,25 +4,6 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 
-// const fraunces = Fraunces({
- 
-//   subsets: ["latin"],
-//   variable: "--font-fraunches"
-// });
-
-// const geistMono = Geist_Mono({
- 
-//   subsets: ["latin"],
-//   variable:"--font-geist-mono"
-// });
-
-
-// const plusJakartaSans = Plus_Jakarta_Sans({
-  
-//   subsets: ["latin"],
-//   variable:"--font-body"
-// });
-
 const outfit = Outfit({
 
   subsets:["latin"],
@@ -36,8 +17,19 @@ const ovo = Ovo({
   weight: "400"
 })
 export const metadata: Metadata = {
-  title: "Mousumi's Portfolio",
-  description: "Portfolio of Mousumi Mukherjee, a frontend developer based in Stockholm specializing in React, Next.js, and TypeScript.",
+  metadataBase: new URL("https://mousumi-portfolio-5u9u.vercel.app"),
+  title: "Mousumi Mukherjee | Frontend & Full-Stack Developer",
+  description:
+    "Portfolio of Mousumi Mukherjee, a frontend development student in Stockholm building web apps with React, Next.js, TypeScript, Angular and .NET. Open to LIA internships.",
+  openGraph: {
+    title: "Mousumi Mukherjee | Frontend & Full-Stack Developer",
+    description:
+      "Frontend and full-stack projects built with React, Next.js, TypeScript, Angular and .NET.",
+    url: "/",
+    siteName: "Mousumi Mukherjee",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({

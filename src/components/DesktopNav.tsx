@@ -6,7 +6,7 @@ const DesktopNav = () => {
     <nav
       className="border-b border-gray-700 bg-black/40 backdrop-blur-xl border border-white/10  hidden  md:flex fixed top-0 left-0 z-50 w-full px-8 xl:px-[8%] py-4 items-center justify-between"
     >
-      <a href="#top" className="flex items-center gap-2">
+      <a href="#home" className="flex items-center gap-2">
         <h1 className="font-ovo text-lg text-white cursor-pointer font-bold">
           Mousumi Mukherjee
         </h1>
@@ -27,7 +27,7 @@ const DesktopNav = () => {
         href="mailto:mousmichatterjee6@gmail.com"
         className="bg-orange-400 font-ovo flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full"
       >
-        Hire me{" "}
+       Let's talk{" "}
       </a>
     </nav>
   );
