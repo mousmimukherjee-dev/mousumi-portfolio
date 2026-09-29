@@ -14,7 +14,7 @@ export const Hero = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="flex items-center gap-4  mb-1 mt-1 md:mt-8"
+        className="flex items-center gap-4 mb-1 mt-8 md:mt-12"
       >
         <span className="text-orange-400 font-mono text-sm">
           Frontend & Fullstack Developer.
@@ -33,9 +33,9 @@ export const Hero = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="mt-5 text-3xl sm:text-5xl md:text-7xl lg:text-7xl font-light font-fraunches"
           >
-            Building modern web experiences from{" "}
+            Building modern web experiences with{" "}
             <span className="text-orange-400 block whitespace-nowrap">
-              frontend to backend.
+              React & Next.js.
             </span>
           </motion.h1>
 
@@ -112,8 +112,10 @@ export const Hero = () => {
                 MM
               </div>
               <p className="font-fraunches text-lg mt-3">Mousumi Mukherjee</p>
-              <p className="text-gray-400 font-mono text-xs mt-1">
-                Frontend &amp; Fullstack Developer · Stockholm, Sweden
+              <p className="text-gray-300 font-mono text-sm mt-1 flex flex-wrap items-center gap-x-2">
+                <span>Frontend &amp; Fullstack Developer</span>
+                <span aria-hidden="true">·</span>
+                <span>Stockholm, Sweden</span>
               </p>
               <div className="flex flex-wrap gap-2 mt-3">
                 {[
@@ -142,14 +144,14 @@ export const Hero = () => {
           >
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <p className="text-gray-400 font-mono text-xs tracking-widest">
+              <p className="text-gray-300 font-mono text-xs tracking-widest">
                 CURRENTLY BUILDING
               </p>
             </div>
             <p className="font-fraunches text-lg mt-2">
               Portfolio v2 — this site
             </p>
-            <p className="text-gray-400 font-ovo text-sm mt-2">
+            <p className="text-gray-300 font-ovo text-sm mt-2">
               Next.js + Tailwind + Framer Motion. Focusing on micro-interactions
               and polish.
             </p>
@@ -192,8 +194,11 @@ export const Hero = () => {
               ,
             </p>
             <p className="pl-4">
-             lookingFor:{" "}
-              <span className="text-orange-300">&quot;LIA internship&quot;</span>,
+              lookingFor:{" "}
+              <span className="text-orange-300">
+                &quot;LIA internship&quot;
+              </span>
+              ,
             </p>
             <p className="pl-4">
               role:{" "}
