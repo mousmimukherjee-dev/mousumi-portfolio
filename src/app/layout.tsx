@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mousumi-portfolio-5u9u.vercel.app"),
   title: "Mousumi Mukherjee | Frontend & Full-Stack Developer",
   description:
-    "Portfolio of Mousumi Mukherjee, a frontend development student in Stockholm building web apps with React, Next.js, TypeScript, Angular and .NET. Open to LIA internships.",
+    "Portfolio of Mousumi Mukherjee, a frontend developer student in Stockholm. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
   openGraph: {
     title: "Mousumi Mukherjee | Frontend & Full-Stack Developer",
     description:
-      "Frontend and full-stack projects built with React, Next.js, TypeScript, Angular and .NET.",
+      "Personal portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
     url: "/",
     siteName: "Mousumi Mukherjee",
     type: "website",
