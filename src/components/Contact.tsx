@@ -58,19 +58,21 @@ const Contact = () => {
             together.
           </h2>
           <p className="text-gray-300 font-ovo max-w-xl mb-10 leading-relaxed">
-            I am currently seeking a LIA internship or junior frontend developer
-            role where I can contribute, keep learning, and grow alongside
-            experienced developers. If you are looking for a motivated frontend
-            developer with experience in React, Next.js, TypeScript, and modern
-            web tools. I would love to hear from you.
+            I am looking for an LIA internship or a junior frontend or
+            full-stack role. If you have an opportunity, or just want to talk
+            about a project, send me an email or find me on LinkedIn.
           </p>
           <a
             href="mailto:mousumi.chatterjee6@gmail.com"
             className="inline-flex  items-center gap-1 bg-orange-400 text-black-100 font-mono p-2 md:px-6 md:py-4 rounded-lg md:rounded-full hover:bg-orange-300 transition-colors"
           >
             <Mail className="w-4 h-4" />
-            <span className="hidden sm:inline text-sm font-mono text-black-100">mousmichatterjee6@gmail.com</span>
-            <span className="md:hidden inline-flex text-sm font-mono text-black-100">Email me</span>    
+            <span className="hidden sm:inline text-sm font-mono text-black-100">
+              mousmichatterjee6@gmail.com
+            </span>
+            <span className="md:hidden inline-flex text-sm font-mono text-black-100">
+              Email me
+            </span>
             <ArrowUpRight className="w-4 h-4 text-black-100" />
           </a>
         </motion.div>
