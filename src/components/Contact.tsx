@@ -59,7 +59,7 @@ const Contact = () => {
           </h2>
           <p className="text-gray-300 font-ovo max-w-xl mb-10 leading-relaxed">
             I am looking for an LIA internship or a junior frontend or
-            full-stack role. If you have an opportunity, or just want to talk
+            fullstack role. If you have an opportunity, or just want to talk
             about a project, send me an email or find me on LinkedIn.
           </p>
           <a
