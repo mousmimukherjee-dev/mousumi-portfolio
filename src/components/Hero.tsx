@@ -66,7 +66,7 @@ export const Hero = () => {
         className="relative z-10 mb-1 mt-8 flex flex-wrap items-center gap-4 md:mt-12"
       >
         <span className="font-mono text-sm text-orange-400">
-          Frontend &amp; Fullstack Developer.
+          Frontend Developer.
         </span>
 
         <span className="hidden h-px max-w-20 flex-1 bg-gray-600 sm:block" />
@@ -129,11 +129,7 @@ export const Hero = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
             className="mt-5 max-w-xl font-ovo text-lg text-gray-300 md:mt-8"
           >
-            Frontend &amp; Fullstack developer who enjoys turning ideas into
-            fast, accessible digital experiences. Driven by curiosity and a
-            passion for continuous learning, I see every project as an
-            opportunity to solve problems, refine my craft, and build things
-            people genuinely enjoy.
+            I enjoy crafting clear, accessible websites with thoughtful design and smooth interaction.
           </motion.p>
 
           <motion.div
@@ -215,7 +211,7 @@ export const Hero = () => {
               <p className="mt-3 font-fraunces text-lg">Mousumi Mukherjee</p>
 
               <p className="mt-1 text-sm text-gray-400">
-                Frontend &amp; Fullstack Developer · Stockholm, Sweden
+                Frontend Developer · Stockholm, Sweden
               </p>
 
               <div className="mt-3 flex flex-wrap gap-2">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { projects } from "@/data/projects";
+import { SectionGlow } from "./SectionGlow";
 
 type Project = {
   id: string | number;
@@ -68,8 +69,9 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full scroll-mt-24 bg-black px-[8%] py-24 text-white"
+      className="relative w-full scroll-mt-24 bg-black px-[8%] py-24 text-white"
     >
+      <SectionGlow/>
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
