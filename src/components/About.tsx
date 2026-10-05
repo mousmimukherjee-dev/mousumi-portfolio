@@ -2,14 +2,17 @@ import React from "react";
 import { timeline } from "@/data/timeline";
 import { tags } from "@/data/tags";
 import { motion } from "motion/react";
+import { SectionGlow } from "./SectionGlow";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="w-full px-[8%] pt-5 pb-5 md:pt-32 md:scroll-mt-10 scroll-mt-20 bg-black text-white"
+      className=" relative w-full px-[8%] pt-5 pb-5 md:pt-32 md:scroll-mt-10 scroll-mt-20 bg-black text-white"
     >
+     
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+         <SectionGlow />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

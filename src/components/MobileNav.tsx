@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { navbar } from "@/data/navbar";
@@ -12,13 +13,21 @@ const MobileNav = () => {
   const closeMenu = () => setMenu(false);
 
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
+    const handleClickOutside = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setMenu(false);
       }
     };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenu(false);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
   }, []);
 
   useEffect(() => {
@@ -31,56 +40,51 @@ const MobileNav = () => {
   return (
     <nav
       ref={navRef}
-      className="border-b border-gray-700 bg-black/90 backdrop-blur-xl border md:hidden w-full fixed top-0 left-0 z-50 flex flex-col"
+      aria-label="Mobile"
+      className="fixed left-0 top-0 z-50 flex w-full flex-col border-b border-white/10 bg-black/90 backdrop-blur-xl md:hidden"
     >
-      <div className="w-full flex top-0 left-0 right-0 z-50 bg-black px-5 py-4 items-center justify-between">
+      <div className="flex w-full items-center justify-between px-5 py-4">
         <a href="#home" className="flex items-center gap-2">
-          <h1 className="font-ovo text-lg text-white cursor-pointer font-bold">
+          <span className="cursor-pointer font-ovo text-lg font-bold text-white">
             Mousumi Mukherjee
-          </h1>
-          <span className="text-orange-400 font-mono text-sm border border-orange-400/40 rounded px-2 py-0.5">
+          </span>
+          <span className="rounded border border-orange-400/40 px-2 py-0.5 font-mono text-sm text-orange-400">
             dev
           </span>
         </a>
 
         <button
-          aria-label="menu"
-          aria-haspopup="true"
+          type="button"
+          aria-label={menu ? "Close menu" : "Open menu"}
           aria-expanded={menu}
+          aria-controls="mobile-menu"
           onClick={toggleMenu}
         >
-          {menu ? (
-            <Image
-              src="/close-white.png"
-              alt=""
-              width={24}
-              height={24}
-              className="w-6"
-            />
-          ) : (
-            <Image
-              src="/menu-white.png"
-              alt=""
-              width={24}
-              height={24}
-              className="w-6 "
-            />
-          )}
+          <Image
+            src={menu ? "/close-white.png" : "/menu-white.png"}
+            alt=""
+            width={24}
+            height={24}
+            className="w-6"
+          />
         </button>
       </div>
 
       <ul
-        className={`w-full text-white flex top-17 left-0 flex-col items-start overflow-y-auto transition-all duration-400 ease-in-out ${
-          menu ? "h-screen opacity-100" : "h-0 opacity-0"
+        id="mobile-menu"
+        className={`flex w-full flex-col items-start overflow-y-auto text-white transition-all duration-400 ease-in-out ${
+          menu
+            ? "visible h-[calc(100dvh-4.25rem)] opacity-100"
+            : "invisible h-0 opacity-0"
         }`}
       >
         {navbar.map((item) => (
-          <li
-            key={item.id}
-            className="font-fraunches w-full border-b border-gray-700"
-            onClick={closeMenu}
-          >
-            <Link href={item.link} className="block w-full px-6 py-5 text-2xl">
+          <li key={item.id} className="w-full border-b border-white/10 font-fraunces">
+            <Link
+              href={item.link}
+              onClick={closeMenu}
+              className="block w-full px-6 py-5 text-2xl"
+            >
               {item.title}
             </Link>
           </li>
@@ -89,9 +93,9 @@ const MobileNav = () => {
           <a
             href="mailto:mousmichatterjee6@gmail.com"
             onClick={closeMenu}
-            className="bg-orange-400 font-ovo flex items-center justify-center gap-3 py-3.5 border border-gray-500 rounded-full w-full"
+            className="flex w-full items-center justify-center gap-3 rounded-full bg-orange-400 py-3.5 font-ovo font-medium text-black"
           >
-           Let's talk
+            Let&apos;s talk
           </a>
         </li>
       </ul>

@@ -4,6 +4,7 @@ import React from "react";
 import { FileText, Mail, ArrowUpRight } from "lucide-react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { motion } from "motion/react";
+import { SectionGlow } from "./SectionGlow";
 
 interface ContactLink {
   icon: React.ReactNode;
@@ -39,8 +40,9 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full px-[8%] min-h-screen  pt-5 pb-5 md:pt-32 py-24 scroll-mt-20 bg-black text-white "
+      className="relative w-full px-[8%] min-h-screen  pt-5 pb-5 md:pt-32 py-24 scroll-mt-20 bg-black text-white "
     >
+      <SectionGlow/>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

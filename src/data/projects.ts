@@ -1,18 +1,7 @@
 export const projects = [
+  
   {
     id: 1,
-    name: "BookVault",
-    description:
-      "A full-stack book management app with authentication and CRUD functionality for managing a personal book collection.",
-    stack: ["Angular", ".NET", "C#", "SQL Server", "Bootstrap"],
-    year: 2026,
-    image: "/projects/bookvault.png",
-    github: "https://github.com/mousmimukherjee-dev/BookVault",
-    demo: "https://brave-stone-058ce9710.5.azurestaticapps.net",
-    label: "Personal project",
-  },
-  {
-    id: 2,
     name: "VAL",
     description:
       "An e-commerce frontend for browsing products by category, sorting products, and managing a shopping cart.",
@@ -24,7 +13,7 @@ export const projects = [
     label: "Coursework",
   },
   {
-    id: 3,
+    id: 2,
     name: "ReelDB",
     description:
       "A movie discovery app using TMDB to browse trending and top-rated movies and search for films.",
@@ -34,6 +23,18 @@ export const projects = [
     github: "https://github.com/mousmimukherjee-dev/ReelDB",
     demo: "https://reel-db-pdpv.vercel.app/",
     label: "Coursework",
+  },
+  {
+    id: 3,
+    name: "BookVault",
+    description:
+      "A full-stack book management app with authentication and CRUD functionality for managing a personal book collection.",
+    stack: ["Angular", ".NET", "C#", "SQL Server", "Bootstrap"],
+    year: 2026,
+    image: "/projects/bookvault.png",
+    github: "https://github.com/mousmimukherjee-dev/BookVault",
+    demo: "https://brave-stone-058ce9710.5.azurestaticapps.net",
+    label: "Personal project",
   },
   {
     id: 4,
