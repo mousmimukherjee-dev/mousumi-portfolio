@@ -16,19 +16,19 @@ interface ContactLink {
 
 const contactLinks: ContactLink[] = [
   {
-    icon: <FiGithub className="w-4 h-4" />,
+    icon: <FiGithub className="h-4 w-4" />,
     label: "GitHub",
     value: "github.com/mousmimukherjee-dev",
     href: "https://github.com/mousmimukherjee-dev",
   },
   {
-    icon: <FiLinkedin className="w-4 h-4" />,
+    icon: <FiLinkedin className="h-4 w-4" />,
     label: "LinkedIn",
     value: "linkedin.com/in/mousumi-mukherjee22",
     href: "https://linkedin.com/in/mousumi-mukherjee22",
   },
   {
-    icon: <FileText className="w-4 h-4" />,
+    icon: <FileText className="h-4 w-4" />,
     label: "Resume",
     value: "Download PDF",
     href: "/Mousumi_CV.pdf",
@@ -40,42 +40,42 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative w-full px-[8%] min-h-screen  pt-5 pb-5 md:pt-32 py-24 scroll-mt-20 bg-black text-white "
+      className="relative min-h-screen w-full scroll-mt-20 bg-canvas px-[8%] py-24 pb-5 pt-5 text-ink md:pt-32"
     >
-      <SectionGlow/>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16">
+      <SectionGlow />
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 lg:grid-cols-[1fr_360px]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
         >
-          <p className="text-orange-400 text-sm tracking-widest font-semibold mb-6 font-mono">
+          <p className="mb-6 font-mono text-sm font-semibold tracking-widest text-sky">
             CONTACT
           </p>
 
-          <h2 className="text-3xl sm:text-7xl font-Ovo leading-tight">
+          <h2 className="font-ovo text-3xl leading-tight sm:text-7xl">
             Let&apos;s build something
           </h2>
-          <h2 className="text-3xl sm:text-7xl italic font-Ovo text-orange-400 mb-8">
+          <h2 className="mb-8 w-fit bg-linear-to-r from-pink to-violet bg-clip-text pr-2 font-ovo text-3xl italic text-transparent sm:text-7xl">
             together.
           </h2>
-          <p className="text-gray-300 font-ovo max-w-xl mb-10 leading-relaxed">
+          <p className="mb-10 max-w-xl font-ovo leading-relaxed text-ink/80">
             I am looking for an LIA internship or a junior frontend or
             fullstack role. If you have an opportunity, or just want to talk
             about a project, send me an email or find me on LinkedIn.
           </p>
           <a
-            href="mailto:mousumi.chatterjee6@gmail.com"
-            className="inline-flex  items-center gap-1 bg-orange-400 text-black-100 font-mono p-2 md:px-6 md:py-4 rounded-lg md:rounded-full hover:bg-orange-300 transition-colors"
+            href="mailto:mousmichatterjee6@gmail.com"
+            className="inline-flex items-center gap-2 rounded-lg border border-pink bg-pink/10 p-2 font-mono text-ink shadow-[0_0_28px_-6px_var(--color-pink)] transition-shadow hover:shadow-[0_0_36px_-4px_var(--color-pink)] md:rounded-full md:px-6 md:py-4"
           >
-            <Mail className="w-4 h-4" />
-            <span className="hidden sm:inline text-sm font-mono text-black-100">
+            <Mail className="h-4 w-4" />
+            <span className="hidden font-mono text-sm sm:inline">
               mousmichatterjee6@gmail.com
             </span>
-            <span className="md:hidden inline-flex text-sm font-mono text-black-100">
+            <span className="inline-flex font-mono text-sm md:hidden">
               Email me
             </span>
-            <ArrowUpRight className="w-4 h-4 text-black-100" />
+            <ArrowUpRight className="h-4 w-4" />
           </a>
         </motion.div>
 
@@ -91,17 +91,17 @@ const Contact = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              {...(link.download ? { download: true } : { target: "_blank" })}
-              className="border border-gray-700 rounded-lg p-2 md:p-6 hover:border-orange-400/60 transition-colors group"
+              {...(link.download ? { download: true } : {})}
+              className="group rounded-lg border border-edge bg-surface/40 p-2 transition-colors hover:border-violet/60 md:p-6"
             >
               <div className="flex items-center justify-between">
                 <div className="min-w-0 flex-1">
-                  <p className="text-gray-500 font-mono text-xs mb-2 break-all">
+                  <p className="mb-2 break-all font-mono text-xs text-ink/60">
                     {link.label}
                   </p>
                   <p className="font-mono text-sm sm:text-base">{link.value}</p>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-gray-500 group-hover:text-orange-400 transition-colors shrink-0" />
+                <ArrowUpRight className="h-4 w-4 shrink-0 text-ink/60 transition-colors group-hover:text-pink" />
               </div>
             </a>
           ))}

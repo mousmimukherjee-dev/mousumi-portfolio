@@ -13,7 +13,7 @@ interface SkillGroup {
 
 const skillGroups: SkillGroup[] = [
   {
-    icon: <Code2 className="w-4 h-4" />,
+    icon: <Code2 className="h-4 w-4" />,
     title: "CORE",
     skills: [
       "HTML5 / Semantics",
@@ -23,7 +23,7 @@ const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    icon: <Layers className="w-4 h-4" />,
+    icon: <Layers className="h-4 w-4" />,
     title: "FRAMEWORKS",
     skills: [
       "React",
@@ -33,26 +33,29 @@ const skillGroups: SkillGroup[] = [
       "Tailwind CSS",
       "Bootstrap",
       "MUI",
+      "shadcn/ui",
     ],
   },
   {
-    icon: <Database className="w-4 h-4" />,
+    icon: <Database className="h-4 w-4" />,
     title: "BACKEND & DATABASE",
     skills: [
       "C# / .NET",
       "ASP.NET Core",
       "SQL Server",
+      "MongoDB",
+      "Supabase",
       "Entity Framework Core",
       "REST APIs",
     ],
   },
   {
-    icon: <FlaskConical className="w-4 h-4" />,
+    icon: <FlaskConical className="h-4 w-4" />,
     title: "TESTING",
     skills: ["Jest", "React Testing Library"],
   },
   {
-    icon: <Terminal className="w-4 h-4" />,
+    icon: <Terminal className="h-4 w-4" />,
     title: "TOOLING",
     skills: [
       "Git / GitHub",
@@ -64,7 +67,7 @@ const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    icon: <Globe className="w-4 h-4" />,
+    icon: <Globe className="h-4 w-4" />,
     title: "EXPLORING",
     skills: ["Node.js", "Express.js", "PostgreSQL"],
   },
@@ -81,33 +84,38 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative w-full px-[8%]  pt-5 pb-5 md:pt-32 py-24 md:scroll-mt-10 scroll-mt-20 bg-black text-white"
+      className="relative w-full scroll-mt-20 bg-canvas px-[8%] py-24 pb-5 pt-5 text-ink md:scroll-mt-10 md:pt-32"
     >
-      <SectionGlow/>
-      <motion.div initial={{opacity : 0 , y : 30}} whileInView={{opacity:1, y : 0}} transition={{duration: 0.8 , ease: "easeInOut", delay: 0.2}} className="max-w-6xl mx-auto">
-        <p className="text-orange-400 text-sm tracking-widest font-semibold mb-6 font-mono">
+      <SectionGlow />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+        className="mx-auto max-w-6xl"
+      >
+        <p className="mb-6 font-mono text-sm font-semibold tracking-widest text-sky">
           SKILLS
         </p>
 
-        <h2 className="text-3xl sm:text-7xl font-Ovo mb-16">The toolkit</h2>
+        <h2 className="mb-16 font-ovo text-3xl sm:text-7xl">The toolkit</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-gray-700">
+        <div className="grid grid-cols-1 border border-edge bg-surface/40 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group, index) => (
             <div
               key={group.title}
               className={`p-8 ${
                 index !== skillGroups.length - 1
-                  ? "border-b sm:border-b-0 sm:border-r border-gray-700"
+                  ? "border-b border-edge sm:border-b-0 sm:border-r"
                   : ""
               }`}
             >
-              <div className="flex items-center gap-2 text-orange-400 font-mono text-sm mb-6">
+              <div className="mb-6 flex items-center gap-2 font-mono text-sm text-pink">
                 {group.icon}
                 <span>{group.title}</span>
               </div>
               <ul className="space-y-3">
                 {group.skills.map((skill) => (
-                  <li key={skill} className="text-gray-300 font-ovo">
+                  <li key={skill} className="font-ovo text-ink/80">
                     {skill}
                   </li>
                 ))}
@@ -115,15 +123,15 @@ const Skills = () => {
             </div>
           ))}
         </div>
-        <div className="border border-t-0 border-gray-700 p-8 flex flex-col sm:flex-row sm:items-center gap-4 flex-wrap">
-          <span className="font-mono text-gray-400 text-sm whitespace-nowrap">
+        <div className="flex flex-col flex-wrap gap-4 border border-t-0 border-edge p-8 sm:flex-row sm:items-center">
+          <span className="whitespace-nowrap font-mono text-sm text-ink/60">
             currently_studying:
           </span>
           <div className="flex flex-wrap gap-3">
             {currentlyStudying.map((item) => (
               <span
                 key={item}
-                className="border border-orange-400/40 text-orange-400 text-xs font-mono px-4 py-2 rounded-full"
+                className="rounded-full border border-violet/50 px-4 py-2 font-mono text-xs text-sky"
               >
                 {item}
               </span>

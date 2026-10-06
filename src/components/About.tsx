@@ -8,27 +8,26 @@ const About = () => {
   return (
     <section
       id="about"
-      className=" relative w-full px-[8%] pt-5 pb-5 md:pt-32 md:scroll-mt-10 scroll-mt-20 bg-black text-white"
+      className="relative w-full scroll-mt-20 bg-canvas px-[8%] pb-5 pt-5 text-ink md:scroll-mt-10 md:pt-32"
     >
-     
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-         <SectionGlow />
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 lg:grid-cols-2">
+        <SectionGlow />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
         >
-          <p className="text-orange-400 text-sm tracking-widest font-semibold mb-8">
+          <p className="mb-8 text-sm font-semibold tracking-widest text-sky">
             About me
           </p>
-          <p className=" text-2xl tracking-widest font-semibold mb-8">
+          <p className="mb-8 text-2xl font-semibold tracking-widest">
             Core Principles
           </p>
-          <div className="border-l border-gray-700 pl-6 flex flex-col gap-8">
+          <div className="flex flex-col gap-8 border-l border-edge pl-6">
             {timeline.map((item, index) => (
               <div key={index} className="relative">
-                <span className="absolute -left-[29px] top-1.5 w-2 h-2 rounded-full bg-orange-400" />
-                <p className="text-gray-300 font-ovo">{item.text}</p>
+                <span className="absolute -left-[29px] top-1.5 h-2 w-2 rounded-full bg-pink shadow-[0_0_10px_var(--color-pink)]" />
+                <p className="font-ovo text-ink/80">{item.text}</p>
               </div>
             ))}
           </div>
@@ -39,7 +38,7 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-            className="text-xl sm:text-5xl font-Ovo leading-tight mb-2 whitespace-nowrap"
+            className="mb-2 whitespace-nowrap font-ovo text-xl leading-tight sm:text-5xl"
           >
             Where
           </motion.h2>
@@ -47,12 +46,12 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-            className="text-xl sm:text-5xl font-Ovo italic text-orange-400 mb-8"
+            className="mb-8 w-fit bg-linear-to-r from-pink to-violet bg-clip-text pr-2 font-ovo text-xl italic text-transparent sm:text-5xl"
           >
             design meets technology.
           </motion.h2>
 
-          <div className="flex flex-col gap-5 text-gray-300 font-ovo mb-8">
+          <div className="mb-8 flex flex-col gap-5 font-ovo text-ink/80">
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

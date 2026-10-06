@@ -21,7 +21,7 @@ type Project = {
 const items: Project[] = projects;
 
 const linkClass =
-  "flex items-center gap-1 text-sm underline underline-offset-4 transition-colors hover:text-orange-400";
+  "flex items-center gap-1 text-sm underline underline-offset-4 transition-colors hover:text-pink";
 
 const ProjectLinks = ({ project }: { project: Project }) => (
   <div className="mt-5 flex items-center gap-5">
@@ -54,7 +54,7 @@ const TechTags = ({ tech }: { tech?: string[] }) =>
       {tech.map((item) => (
         <span
           key={item}
-          className="rounded-full border border-gray-700 px-3 py-1 text-xs text-gray-300"
+          className="rounded-full border border-edge px-3 py-1 text-xs text-ink/80"
         >
           {item}
         </span>
@@ -69,16 +69,16 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative w-full scroll-mt-24 bg-black px-[8%] py-24 text-white"
+      className="relative w-full scroll-mt-24 bg-canvas px-[8%] py-24 text-ink"
     >
-      <SectionGlow/>
+      <SectionGlow />
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-4 text-sm tracking-[0.3em] text-gray-400"
+          className="mb-4 text-sm tracking-[0.3em] text-sky"
         >
           PROJECTS
         </motion.p>
@@ -96,14 +96,14 @@ const Projects = () => {
             href="https://github.com/mousmimukherjee-dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 pb-2 text-sm transition-colors hover:text-orange-400"
+            className="flex items-center gap-2 pb-2 text-sm transition-colors hover:text-pink"
           >
             All on GitHub
             <ArrowUpRight size={16} />
           </a>
         </motion.div>
 
-        <div className="border-t border-gray-800" />
+        <div className="border-t border-edge" />
 
         {featured && (
           <motion.article
@@ -113,7 +113,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="grid items-center gap-8 py-12 lg:grid-cols-[1.4fr_1fr] lg:gap-12"
           >
-            <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-gray-800">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-edge shadow-[0_0_40px_-12px_var(--color-violet)]">
               <Image
                 src={featured.image}
                 alt={`${featured.name} project preview`}
@@ -125,16 +125,16 @@ const Projects = () => {
             </div>
 
             <div>
-              <div className="flex items-center gap-3 font-mono text-xs tracking-wider text-orange-400">
+              <div className="flex items-center gap-3 font-mono text-xs tracking-wider text-sky">
                 <span>FEATURED</span>
-                <span className="text-gray-400">{featured.year}</span>
+                <span className="text-ink/60">{featured.year}</span>
               </div>
 
               <h3 className="mt-3 font-fraunces text-3xl sm:text-4xl">
                 {featured.name}
               </h3>
 
-              <p className="mt-3 max-w-xl font-ovo leading-relaxed text-gray-300">
+              <p className="mt-3 max-w-xl font-ovo leading-relaxed text-ink/80">
                 {featured.description}
               </p>
 
@@ -145,7 +145,7 @@ const Projects = () => {
         )}
 
         {others.length > 0 && (
-          <div className="grid gap-6 border-t border-gray-800 pt-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 border-t border-edge pt-12 md:grid-cols-2 lg:grid-cols-3">
             {others.map((project, index) => (
               <motion.article
                 key={project.id}
@@ -154,7 +154,7 @@ const Projects = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="flex flex-col overflow-hidden rounded-2xl border border-gray-800 bg-gray-950 transition-colors duration-300 hover:border-orange-400/40"
+                className="flex flex-col overflow-hidden rounded-2xl border border-edge bg-surface transition-colors duration-300 hover:border-violet/60"
               >
                 <div className="relative aspect-video w-full overflow-hidden">
                   <Image
@@ -169,12 +169,12 @@ const Projects = () => {
                 <div className="flex flex-1 flex-col p-5">
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="font-fraunces text-xl">{project.name}</h3>
-                    <span className="shrink-0 text-sm text-gray-400">
+                    <span className="shrink-0 text-sm text-ink/60">
                       {project.year}
                     </span>
                   </div>
 
-                  <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-gray-400">
+                  <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-ink/70">
                     {project.description}
                   </p>
 

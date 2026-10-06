@@ -6,12 +6,18 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full px-[8%] py-6 bg-black text-gray-500 border-t border-gray-800">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 font-mono text-xs">
-        <p className="text-center">© {year} Mousumi Mukherjee <br className="md:hidden"></br>Built with Next.js &amp; Tailwind</p>
+    <footer className="w-full border-t border-edge bg-canvas px-[8%] py-6 text-ink/50">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 font-mono text-xs sm:flex-row">
+        <p className="text-center">
+          © {year} Mousumi Mukherjee <br className="md:hidden" />
+          Built with Next.js &amp; Tailwind
+        </p>
         <p>
           v1.0.0 — last updated{" "}
-          {new Date().toLocaleDateString("en-US", { month: "short", year: "numeric" })}
+          {new Date().toLocaleDateString("en-US", {
+            month: "short",
+            year: "numeric",
+          })}
         </p>
       </div>
     </footer>
