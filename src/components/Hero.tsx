@@ -22,7 +22,6 @@ export const Hero = () => {
   const reduceMotion = useReducedMotion();
 
   const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     if (reduceMotion) {
@@ -30,27 +29,14 @@ export const Hero = () => {
       return;
     }
 
-    let timeout: ReturnType<typeof setTimeout>;
+    if (displayText === TYPED_TEXT) return;
 
-    if (!isDeleting && displayText === TYPED_TEXT) {
-      timeout = setTimeout(() => setIsDeleting(true), 2200);
-    } else if (isDeleting && displayText === "") {
-      timeout = setTimeout(() => setIsDeleting(false), 500);
-    } else {
-      timeout = setTimeout(
-        () => {
-          setDisplayText((prev) =>
-            isDeleting
-              ? prev.slice(0, -1)
-              : TYPED_TEXT.slice(0, prev.length + 1),
-          );
-        },
-        isDeleting ? 55 : 100,
-      );
-    }
+    const timeout = setTimeout(() => {
+      setDisplayText(TYPED_TEXT.slice(0, displayText.length + 1));
+    }, 100);
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, reduceMotion]);
+  }, [displayText, reduceMotion]);
 
   return (
     <main
