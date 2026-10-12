@@ -37,7 +37,7 @@ export default function Contact() {
             <span className="block">together.</span>
           </p>
           <p className="mt-8 max-w-[52ch] text-lg font-medium leading-snug md:text-xl">
-            I am looking for an LIA internship or a junior frontend or
+            I am currently looking for a LIA internship or a junior frontend or
             fullstack role. If you have an opportunity, or just want to talk
             about a project, send me an email or find me on LinkedIn.
           </p>
