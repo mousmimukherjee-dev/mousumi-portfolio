@@ -13,8 +13,23 @@ featured?: boolean;
 
 
 export const projects: Project[] = [
+
+{
+  id: 1,
+  name: "SnapSpace",
+  description:
+    "A photo-sharing app built with Next.js, TypeScript, and Supabase. Users can sign up, upload photos, explore the community gallery, and delete their own photos.",
+  stack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+  year: "2026",
+  image: "/projects/snapspace.png",
+  github: "https://github.com/mousmimukherjee-dev/photo-store",
+  demo: "https://photo-store-frvp.vercel.app/",
+  label: "Coursework",
+  featured: true,
+},
+
   {
-    id: 1,
+    id: 2,
     name: "VAL",
     description:
       "An e-commerce frontend for browsing products by category, sorting products, and managing a shopping cart.",
@@ -25,10 +40,10 @@ export const projects: Project[] = [
       "https://github.com/mousmimukherjee-dev/val-ecommerce-submission",
     demo: "https://val-ecommerce.vercel.app",
     label: "Coursework",
-    featured: true,
+    
   },
   {
-    id: 2,
+    id: 3,
     name: "ReelDB",
     description:
       "A movie discovery app using TMDB to browse trending and top-rated movies and search for films.",
@@ -40,7 +55,7 @@ export const projects: Project[] = [
     label: "Coursework",
   },
   {
-    id: 3,
+    id: 4,
     name: "BookVault",
     description:
       "A full-stack book management app with authentication and CRUD functionality for managing a personal book collection.",
@@ -52,7 +67,7 @@ export const projects: Project[] = [
     label: "Personal project",
   },
   {
-    id: 4,
+    id: 5,
     name: "VidTube",
     description:
       "A video streaming platform inspired by YouTube, built with React and Vite, featuring video browsing, search, and a responsive interface.",
@@ -65,7 +80,7 @@ export const projects: Project[] = [
     label: "Coursework",
   },
   {
-    id: 5,
+    id: 6,
     name: "npm Blog Website",
     description:
       "A server-rendered blog built with Node.js, Express, and EJS, featuring user login, authenticated commenting, and a contact form that stores submissions in Google Sheets through Google Apps Script.",

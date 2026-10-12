@@ -19,7 +19,7 @@ const contactLinks: ContactLink[] = [
   {
     label: "Resume",
     value: "Download PDF",
-    href: "/Mousumi_CV.pdf",
+    href: "/mousumi_CV.pdf",
     download: true,
   },
 ];
