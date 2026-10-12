@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { navbar } from "@/data/navbar";
 import { useEffect, useRef, useState } from "react";
+import BackGroundMusic from "./BackGroundMusic";
 
 const MobileNav = () => {
   const [menu, setMenu] = useState(false);
@@ -52,7 +53,7 @@ const MobileNav = () => {
             dev
           </span>
         </a>
-
+          <BackGroundMusic/>
         <button
           type="button"
           aria-label={menu ? "Close menu" : "Open menu"}
@@ -92,7 +93,9 @@ const MobileNav = () => {
             </Link>
           </li>
         ))}
+         
         <li className="w-full px-6 py-6">
+         
           <a
             href="mailto:mousmichatterjee6@gmail.com"
             onClick={closeMenu}

@@ -1,29 +1,23 @@
-"use client"
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import Projects from "@/components/Project";
 import Skills from "@/components/Skills";
-import Image from "next/image";
-import { useEffect } from "react";
+import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
-export default function Home() {
-
-  useEffect(() => {
-    history.scrollRestoration = "manual";
-
-    window.history.replaceState(null, "", "#home");
-    window.scrollTo(0, 0);
-  }, []);
+export default function Page() {
   return (
     <>
-    <Hero/>
-    <About />
-    <Projects />
-    <Skills />
-    <Contact />
-    <Footer />
+      <Header />
+      <main id="main">
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer/>
+      </main>
     </>
   );
 }

@@ -1,27 +1,20 @@
-"use client";
-
-import React from "react";
-
-const Footer = () => {
-  const year = new Date().getFullYear();
+export default function Footer() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const updated = now.toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
 
   return (
-    <footer className="w-full border-t border-edge bg-canvas px-[8%] py-6 text-ink/50">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 font-mono text-xs sm:flex-row">
-        <p className="text-center">
+    <footer className="border-t border-[var(--ink)] px-6 py-6 md:px-12">
+      <div className="flex flex-col gap-2 text-sm font-medium sm:flex-row sm:items-baseline sm:justify-between">
+        <p>
           © {year} Mousumi Mukherjee <br className="md:hidden" />
           Built with Next.js &amp; Tailwind
         </p>
-        <p>
-          v1.0.0 — last updated{" "}
-          {new Date().toLocaleDateString("en-US", {
-            month: "short",
-            year: "numeric",
-          })}
-        </p>
+        <p>v1.0.0 — last updated {updated}</p>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

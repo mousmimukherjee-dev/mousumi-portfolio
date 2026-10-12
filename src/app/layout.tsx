@@ -1,50 +1,37 @@
 import type { Metadata } from "next";
-import { Fraunces, Plus_Jakarta_Sans, Geist_Mono, Outfit, Ovo } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import BackGroundMusic from "@/components/BackGroundMusic";
 
-import Header from "@/components/Header";
-
-const outfit = Outfit({
-
-  subsets:["latin"],
-  variable:"--font-outfit"
-
+const display = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
 });
 
-const ovo = Ovo({
-  subsets: ["latin"],
-  variable: "--font-ovo",
-  weight: "400"
-})
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mousumi-portfolio-5u9u.vercel.app"),
-  title: "Mousumi Mukherjee | Frontend & Full-Stack Developer",
+  title: "Mousumi Mukherjee, Frontend developer",
   description:
-    "Portfolio of Mousumi Mukherjee, a frontend developer student in Stockholm. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
-  openGraph: {
-    title: "Mousumi Mukherjee | Frontend & Full-Stack Developer",
-    description:
-      "Personal portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
-    url: "/",
-    siteName: "Mousumi Mukherjee",
-    type: "website",
-    locale: "en_US",
-  },
+    "Frontend developer in Stockholm building interfaces with React and Next.js. Available for a LIA internship from January to May 2027.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="en" className="scroll-smooth overflow-x-hidden" 
-    >
-      <body className={`min-h-full  flex flex-col ${outfit.className} ${ovo.className} h-full antialiased leading-8 overflow-x-hidden`}>
-        <Header/>
+    <html lang="en" className={display.variable}>
+      <body className="min-h-screen antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-[var(--ink)] focus:px-4 focus:py-2 focus:text-[var(--paper)]"
+        >
+          Skip to content
+        </a>
         {children}
-        </body>
+        
+      </body>
     </html>
   );
 }

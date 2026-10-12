@@ -1,102 +1,80 @@
-import React from "react";
-import { timeline } from "@/data/timeline";
-import { tags } from "@/data/tags";
-import { motion } from "motion/react";
-import { SectionGlow } from "./SectionGlow";
+"use client";
 
-const About = () => {
+import { motion, useReducedMotion } from "motion/react";
+import { timeline } from "@/data/timeline";
+
+export default function About() {
+  const reduce = useReducedMotion();
+
   return (
-    <section
-      id="about"
-      className="relative w-full scroll-mt-20 bg-canvas px-[8%] pb-5 pt-5 text-ink md:scroll-mt-10 md:pt-32"
-    >
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 lg:grid-cols-2">
-        <SectionGlow />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-        >
-          <p className="mb-8 text-sm font-semibold tracking-widest text-sky">
-            About me
-          </p>
-          <p className="mb-8 text-2xl font-semibold tracking-widest">
+    <section id="about" className="scroll-mt-20 px-6 py-16 md:px-12 md:py-24">
+      <div className="grid gap-10 md:grid-cols-[minmax(0,340px)_1fr] md:gap-16">
+        <div>
+          <h2 className="text-xl font-extrabold">About me</h2>
+          <h3 className="mt-10 text-2xl font-extrabold tracking-[-0.02em]">
             Core Principles
-          </p>
-          <div className="flex flex-col gap-8 border-l border-edge pl-6">
+          </h3>
+          <ul className="mt-4 border-b border-[var(--ink)]">
             {timeline.map((item, index) => (
-              <div key={index} className="relative">
-                <span className="absolute -left-[29px] top-1.5 h-2 w-2 rounded-full bg-pink shadow-[0_0_10px_var(--color-pink)]" />
-                <p className="font-ovo text-ink/80">{item.text}</p>
-              </div>
+              <li
+                key={index}
+                className="border-t border-[var(--ink)] py-4 text-base font-medium leading-snug"
+              >
+                {item.text}
+              </li>
             ))}
-          </div>
-        </motion.div>
+          </ul>
+        </div>
 
         <div>
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-            className="mb-2 whitespace-nowrap font-ovo text-xl leading-tight sm:text-5xl"
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="text-[clamp(2.25rem,5vw,4.5rem)] font-extrabold leading-[0.95] tracking-[-0.035em]"
           >
-            Where
-          </motion.h2>
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-            className="mb-8 w-fit bg-linear-to-r from-pink to-violet bg-clip-text pr-2 font-ovo text-xl italic text-transparent sm:text-5xl"
-          >
-            design meets technology.
-          </motion.h2>
+            <span className="block">Where</span>
+            <span className="block">design meets technology.</span>
+          </motion.p>
 
-          <div className="mb-8 flex flex-col gap-5 font-ovo text-ink/80">
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-            >
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.7,
+              delay: 0.15,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="mt-10 max-w-[60ch] space-y-5 text-lg font-medium leading-snug md:text-xl"
+          >
+            <p>
               I am Mousumi, a frontend developer student based in Stockholm.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-            >
+            </p>
+            <p>
               My journey into frontend development started with curiosity and
               has grown through building real projects and learning by doing. I
               enjoy solving UI problems, improving accessibility, and creating
               interfaces that feel intuitive and responsive. I work primarily
-              with React, Next.js, Angular, TypeScript, and .NET, while
-              continuing to expand my skills across frontend and full-stack
-              development.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-            >
+              with React, Next.js and TypeScript, and I also have some
+              experience with Angular and .NET 9.
+            </p>
+            <p>
               Before moving into tech, I studied fashion design and worked in
               the fashion industry. That experience trained my eye for
               precision, proportion, and detail. I now bring the same attention
               to frontend development, from spacing and typography to visual
               consistency and user interactions.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-            >
+            </p>
+            <p>
               Outside of my studies, I build personal projects to learn new
               technologies in practice. I am currently looking for an LIA
               internship where I can bring that curiosity to a team.
-            </motion.p>
-          </div>
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
   );
-};
-
-export default About;
+}

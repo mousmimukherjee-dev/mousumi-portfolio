@@ -1,68 +1,28 @@
 @import "tailwindcss";
 
-*{
-
-  box-sizing: border-box;
- 
+:root {
+  --paper: #f1f0ec;
+  --ink: #0e0e0e;
+  --accent: #ff4a1c;
 }
 
-@theme{
-
-  /* Primary colors */
-
-  --color-canvas: #0b1020;
-  --color-surface: #121a33;
-  --color-edge: #2a3560;
-  --color-ink: #eef0fa;
-  --color-pink: #f0399c;
-  --color-violet: #9b5de5;
-  --color-sky: #6ea8ff;
-
-
-  /* Black */
-  --color-black-100:#000000;
-
-  /* Fonts */
-  
-  --font-outfit:"Outfit",sans-serif;
-  --font-ovo:"Ovo",serif;
-  --font-fraunches:"Fraunces",serif;
-  --font-body:"Plus Jakarta Sans", sans-serif;
-  --font-geist-mono:"Geist Mono", monospace;
-
-
-  
+html {
+  background: var(--paper);
+  color: var(--ink);
+  scroll-behavior: smooth;
 }
 
-@keyframes glow-drift {
-  0%,
-  100% {
-    transform: translate3d(-35vw, -20vh, 0);
-  }
-  25% {
-    transform: translate3d(25vw, 15vh, 0);
-  }
-  50% {
-    transform: translate3d(10vw, 35vh, 0);
-  }
-  75% {
-    transform: translate3d(-30vw, -10vh, 0);
-  }
+body {
+  font-family: var(--font-display), system-ui, sans-serif;
 }
 
-.glow-blob {
-  background: radial-gradient(
-    circle at center,
-    rgba(240, 57, 156, 0.22) 0%,
-    rgba(155, 93, 229, 0.14) 38%,
-    transparent 70%
-  );
-  animation: glow-drift 18s ease-in-out infinite;
+::selection {
+  background: var(--accent);
+  color: var(--ink);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .glow-blob {
-    animation: none;
+  html {
+    scroll-behavior: auto;
   }
 }
-
