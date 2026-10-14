@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { navbar } from "@/data/navbar";
 import { useEffect, useRef, useState } from "react";
 import BackGroundMusic from "./BackGroundMusic";
@@ -44,38 +45,46 @@ const MobileNav = () => {
       aria-label="Mobile"
       className="fixed left-0 top-0 z-50 flex w-full flex-col border-b border-edge/60 bg-canvas/90 backdrop-blur-xl md:hidden"
     >
-      <div className="flex w-full items-center justify-between px-5 py-4">
-        <a href="#home" className="flex items-center gap-2">
-          <span className="cursor-pointer font-ovo text-lg font-bold text-ink">
-            Mousumi Mukherjee
-          </span>
-          <span className="rounded border border-sky/40 px-2 py-0.5 font-mono text-sm text-sky">
-            dev
-          </span>
-        </a>
-          <BackGroundMusic/>
-        <button
-          type="button"
-          aria-label={menu ? "Close menu" : "Open menu"}
-          aria-expanded={menu}
-          aria-controls="mobile-menu"
-          onClick={toggleMenu}
+      <div className="flex w-full items-center justify-between gap-3 px-5 py-4">
+        <a
+          href="#home"
+          aria-label="Mousumi Mukherjee, back to top"
+          className="flex shrink-0 items-center"
         >
           <Image
-            src={menu ? "/close-white.png" : "/menu-white.png"}
+            src="/icon.svg"
             alt=""
-            width={24}
-            height={24}
-            className="w-6"
+            width={40}
+            height={40}
+            className="h-10 w-10"
           />
-        </button>
+        </a>
+
+        <div className="flex items-center gap-3">
+          <BackGroundMusic />
+
+          <button
+            type="button"
+            aria-label={menu ? "Close menu" : "Open menu"}
+            aria-expanded={menu}
+            aria-controls="mobile-menu"
+            onClick={toggleMenu}
+            className="flex h-6 w-6 items-center justify-center text-ink transition-colors hover:text-pink focus-visible:text-pink focus-visible:outline-none"
+          >
+            {menu ? (
+              <X size={24} strokeWidth={1.75} aria-hidden="true" />
+            ) : (
+              <Menu size={24} strokeWidth={1.75} aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </div>
 
       <ul
         id="mobile-menu"
-        className={`flex w-full flex-col items-start overflow-y-auto text-ink transition-all duration-400 ease-in-out ${
+        className={`flex w-full flex-col items-start overflow-y-auto text-ink transition-all duration-500 ease-in-out ${
           menu
-            ? "visible h-[calc(100dvh-4.25rem)] opacity-100"
+            ? "visible h-[calc(100dvh-5rem)] opacity-100"
             : "invisible h-0 opacity-0"
         }`}
       >
@@ -93,9 +102,8 @@ const MobileNav = () => {
             </Link>
           </li>
         ))}
-         
+
         <li className="w-full px-6 py-6">
-         
           <a
             href="mailto:mousmichatterjee6@gmail.com"
             onClick={closeMenu}
