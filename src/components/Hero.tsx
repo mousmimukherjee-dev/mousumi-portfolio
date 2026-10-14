@@ -16,17 +16,20 @@ export default function Hero() {
       className="relative flex min-h-svh flex-col justify-between overflow-hidden px-5 pb-8 pt-32 sm:px-6 md:px-12 md:pb-10 md:pt-40"
     >
       <motion.div
-  initial={reduce ? false : { opacity: 0, y: 12 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="flex flex-col gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-(--ink)/70 sm:flex-row sm:items-center sm:justify-between md:text-sm"
->
-  <span className="flex items-center gap-3">
-    <span aria-hidden="true" className="h-2 w-2 shrink-0 rounded-full bg-(--accent)" />
-    Frontend Developer · Fullstack Skills
-  </span>
-  <span>Open to LIA / Internships</span>
-</motion.div>
+        initial={reduce ? false : { opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-(--ink)/70 sm:flex-row sm:items-center sm:justify-between md:text-sm"
+      >
+        <span className="flex items-center gap-3">
+          <span
+            aria-hidden="true"
+            className="h-2 w-2 shrink-0 rounded-full bg-(--accent)"
+          />
+          Frontend Developer · Fullstack Skills
+        </span>
+        <span>Open to LIA / Internships</span>
+      </motion.div>
 
       <h1 className="text-[clamp(3.5rem,11vw,12rem)] font-extrabold leading-[0.9] tracking-[-0.065em]">
         {nameLines.map((line) => (
@@ -43,7 +46,7 @@ export default function Hero() {
             >
               {line.text}
               {line.text === "Mukherjee" && (
-                <span className="text-(--accent)">{" "}.</span>
+                <span className="text-(--accent)">.</span>
               )}
             </motion.span>
           </span>
@@ -57,9 +60,9 @@ export default function Hero() {
         className="grid gap-8 border-t border-(--ink)/15 pt-6 md:grid-cols-[1fr_auto] md:items-end md:gap-16"
       >
         <p className="max-w-2xl text-base leading-relaxed text-(--ink)/75 sm:text-lg md:text-xl">
-          I build web applications with a focus on functionality,
-          accessibility, and user experience. Explore my projects, the
-          technologies I work with, and my approach to modern web development.
+          I build web applications with a focus on functionality, accessibility,
+          and user experience. Explore my projects, the technologies I work
+          with, and my approach to modern web development.
         </p>
 
         <a

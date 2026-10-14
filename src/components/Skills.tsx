@@ -79,7 +79,7 @@ export default function Skills() {
           The toolkit
         </p>
       </div>
-      <div className="mt-12 border-b border-[var(--ink)]">
+      <div className="mt-12 border-b border-(--ink)">
         {skillGroups.map((group) => (
           <div key={group.title} className={rowClass}>
             <h3 className={labelClass}>{group.title}</h3>

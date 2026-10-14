@@ -43,20 +43,22 @@ export default function Contact() {
           </p>
           <a
             href="mailto:mousmichatterjee6@gmail.com"
-            className="mt-10 block break-words text-[clamp(1.25rem,3.4vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] underline decoration-[var(--accent)] decoration-[0.07em] underline-offset-[0.12em] transition-colors hover:bg-[var(--accent)] focus-visible:bg-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--ink)]"
+            className="mt-10 block wrap-break-word text-[clamp(1.25rem,3.4vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] underline decoration-(--accent) decoration-[0.07em] underline-offset-[0.12em] transition-colors hover:bg-(--accent) focus-visible:bg-(--accent) focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-(--ink)"
           >
-            <span className="hidden sm:inline">mousmichatterjee6@gmail.com</span>
+            <span className="hidden sm:inline">
+              mousmichatterjee6@gmail.com
+            </span>
             <span className="sm:hidden">Email me</span>
           </a>
-          <ul className="mt-16 border-b border-[var(--ink)]">
+          <ul className="mt-16 border-b border-(--ink)">
             {contactLinks.map((link) => (
-              <li key={link.label} className="border-t border-[var(--ink)]">
+              <li key={link.label} className="border-t border-(--ink)">
                 <a
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   {...(link.download ? { download: true } : {})}
-                  className="flex items-baseline justify-between gap-6 px-3 py-4 transition-colors hover:bg-[var(--accent)] focus-visible:bg-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[var(--ink)]"
+                  className="flex items-baseline justify-between gap-6 px-3 py-4 transition-colors hover:bg-(--accent) focus-visible:bg-(--accent) focus-visible:outline focus-visible:-outline-offset-2 focus-visible:outline-(--ink)"
                 >
                   <span className="font-extrabold">{link.label}</span>
                   <span className="break-all text-base font-medium md:text-lg">

@@ -10,8 +10,8 @@ const BackGroundMusic = () => {
     const audio = audioRef.current;
 
     if (!audio) return;
-    
-    audio.volume=0.1;
+
+    audio.volume = 0.1;
     audio.playbackRate = 0.9;
 
     if (!audio.paused) {

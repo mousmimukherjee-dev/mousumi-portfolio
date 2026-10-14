@@ -14,11 +14,11 @@ export default function About() {
           <h3 className="mt-10 text-2xl font-extrabold tracking-[-0.02em]">
             Core Principles
           </h3>
-          <ul className="mt-4 border-b border-[var(--ink)]">
+          <ul className="mt-4 border-b border-(--ink)">
             {timeline.map((item, index) => (
               <li
                 key={index}
-                className="border-t border-[var(--ink)] py-4 text-base font-medium leading-snug"
+                className="border-t border-(--ink) py-4 text-base font-medium leading-snug"
               >
                 {item.text}
               </li>

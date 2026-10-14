@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { navbar } from "@/data/navbar";
 import { useEffect, useRef, useState } from "react";
 import BackGroundMusic from "./BackGroundMusic";
+import { div } from "motion/react-client";
 
 const MobileNav = () => {
   const [menu, setMenu] = useState(false);
@@ -53,7 +54,8 @@ const MobileNav = () => {
         >
           <Image
             src="/icon.svg"
-            alt=""
+            alt="logo"
+            loading="eager"
             width={40}
             height={40}
             className="h-10 w-10"

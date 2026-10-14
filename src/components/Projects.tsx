@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { projects, type Project } from "@/data/projects";
+import { div } from "motion/react-client";
 
 const linkClass =
   "underline decoration-[0.08em] underline-offset-4 transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)] focus-visible:bg-[var(--ink)] focus-visible:text-[var(--paper)] focus-visible:outline-none";
@@ -57,7 +58,7 @@ function ProjectImage({
   featured?: boolean;
 }) {
   return (
-    <div className="overflow-hidden border border-[var(--ink)]">
+    <div className="overflow-hidden border border-(--ink)">
       <Image
         src={project.image}
         alt={`${project.name} project preview`}
@@ -79,16 +80,12 @@ function ProjectImage({
 export default function Projects() {
   const reduceMotion = useReducedMotion();
 
-  const hiddenPosition = reduceMotion
-    ? false
-    : { opacity: 0, y: 40 };
+  const hiddenPosition = reduceMotion ? false : { opacity: 0, y: 40 };
 
-  const featuredProject = projects.find(
-    (project) => project.featured
-  );
+  const featuredProject = projects.find((project) => project.featured);
 
   const otherProjects = projects.filter(
-    (project) => project.id !== featuredProject?.id
+    (project) => project.id !== featuredProject?.id,
   );
 
   return (
@@ -137,24 +134,20 @@ export default function Projects() {
               duration: 0.7,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="grid items-center gap-8 border-t border-[var(--ink)] py-12 lg:grid-cols-[1.4fr_1fr] lg:gap-12"
+            className="grid items-center gap-8 border-t border-(--ink) py-12 lg:grid-cols-[1.4fr_1fr] lg:gap-12"
           >
             <ProjectImage project={featuredProject} featured />
 
             <div>
               <div className="flex flex-wrap items-center gap-3 text-sm font-medium">
-                <span className={labelClass}>
-                  {featuredProject.label}
-                </span>
+                <span className={labelClass}>{featuredProject.label}</span>
 
                 <span>{featuredProject.year}</span>
 
                 <span className="text-ink/60">Featured</span>
               </div>
 
-              <h3 className={`mt-3 ${titleClass}`}>
-                {featuredProject.name}
-              </h3>
+              <h3 className={`mt-3 ${titleClass}`}>{featuredProject.name}</h3>
 
               <p className="mt-5 max-w-[48ch] text-lg font-medium leading-snug md:text-xl">
                 {featuredProject.description}
@@ -179,7 +172,7 @@ export default function Projects() {
                   delay: index * 0.1,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="grid items-start gap-6 border-t border-[var(--ink)] px-3 py-8 transition-colors duration-200 hover:bg-[var(--accent)] md:grid-cols-[280px_minmax(0,1fr)_auto] md:gap-10 lg:grid-cols-[380px_minmax(0,1fr)_auto]"
+                className="grid items-start gap-6 border-t border-(--ink) px-3 py-8 transition-colors duration-200 hover:bg-(--accent) md:grid-cols-[280px_minmax(0,1fr)_auto] md:gap-10 lg:grid-cols-[380px_minmax(0,1fr)_auto]"
               >
                 <ProjectImage project={project} />
 
@@ -197,13 +190,9 @@ export default function Projects() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3 md:flex-col md:items-end md:gap-2">
-                  <span className={labelClass}>
-                    {project.label}
-                  </span>
+                  <span className={labelClass}>{project.label}</span>
 
-                  <span className="text-sm font-medium">
-                    {project.year}
-                  </span>
+                  <span className="text-sm font-medium">{project.year}</span>
                 </div>
               </motion.li>
             ))}
